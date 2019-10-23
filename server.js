@@ -49,4 +49,18 @@ var server = http.createServer(app);
 var port = process.env.PORT || 3000;
 server.listen(port, function() {
   console.log('Express server running on *:' + port);
+  // Enable ngrok
+  ngrok
+  .connect({
+    addr: port,
+    subdomain: process.env.NGROK_SUBDOMAIN,
+  })
+  .then(url => {
+    console.log(`ngrok forwarding: ${url} -> http://localhiost:${port}`);
+  })
+  .catch(e => {
+    console.log('ngrok error: ', e);
+  });
 });
+
+
