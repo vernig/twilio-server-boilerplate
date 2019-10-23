@@ -26,7 +26,12 @@ const client = require('twilio')(
 
 // Create Express webapp.
 var app = express();
+
+// Static pages goes in ./public folder
 app.use(express.static('public'));
+
+// Enable CORS (especially useful if you have to publish REST APIs)
+app.use(cors());
 
 var bodyParser = require('body-parser');
 // parse application/x-www-form-urlencoded
