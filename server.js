@@ -9,8 +9,10 @@
  */
 require('dotenv').load();
 
-var http = require('http');
-var express = require('express');
+const http = require('http');
+const express = require('express');
+const cors = require('cors');
+const ngrok = require('ngrok');
 
 if (!process.env.TWILIO_ACCOUNT_SID || !process.env.TWILIO_ACCOUNT_SECRET) {
   console.log(
