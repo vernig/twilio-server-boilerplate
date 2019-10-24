@@ -17,6 +17,7 @@ npm run start-dev
 ## Features
 This boilerplate includes:
 * Twilio client. Specify `TWILIO_ACCOUNT_SID` and `TWILIO_ACCOUNT_SECRET` in `.env` file
+* Sample route (`/token`) to generate Twilio Token. You need to fill in `TWILIO_TOKEN_API_KEY` and `TWILIO_TOKEN_API_SECRET` in .env with an API key
 * `ngrok` to publish your server. Specify you subdomain using the `NGROK_SUBDOMAIN` in `.env` file
 * `dotenv` to import variable from `.env` file
 * `cors` to allow CORS on your server (so you can serve APIs usable by browsers)
