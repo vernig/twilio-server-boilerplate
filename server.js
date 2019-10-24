@@ -65,7 +65,7 @@ server.listen(port, function() {
       subdomain: process.env.NGROK_SUBDOMAIN
   })
   .then(url => {
-    console.log(`ngrok forwarding: ${url} -> http://localhiost:${port}`);
+    console.log(`ngrok forwarding: ${url} -> http://localhost:${port}`);
   })
   .catch(e => {
     console.log('ngrok error: ', e);
