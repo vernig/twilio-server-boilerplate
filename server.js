@@ -44,6 +44,13 @@ app.use(bodyParser.json());
 // Uncomment below to add your POST end point
 // app.post('/post-end-point', function(request, response) {
 
+/**
+ * Uncomment below to enable token generation route ('/token'). You need to fill in
+ * TWILIO_TOKEN_API_KEY and TWILIO_TOKEN_API_SECRET in .env file.
+ */
+// const getToken = require('./twilio-jwt');
+// app.get('/token', function(request, response) {
+//   response.send(getToken('username'));
 // });
 
 // Create http server and run it.
