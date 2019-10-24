@@ -1,11 +1,7 @@
 'use strict';
 
 /**
- * Load Twilio configuration from .env config file - the following environment
- * variables should be set:
- * process.env.TWILIO_ACCOUNT_SID
- * process.env.TWILIO_API_KEY
- * process.env.TWILIO_API_SECRET
+ * Load Twilio configuration from .env config file
  */
 require('dotenv').load();
 
@@ -41,8 +37,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-// Uncomment below to add your POST end point
+/**
+ * Uncomment below to add your POST end point
+ */
+
 // app.post('/post-end-point', function(request, response) {
+// });
 
 /**
  * Uncomment below to enable token generation route ('/token'). You need to fill in
@@ -62,7 +62,7 @@ server.listen(port, function() {
   ngrok
   .connect({
     addr: port,
-    subdomain: process.env.NGROK_SUBDOMAIN,
+      subdomain: process.env.NGROK_SUBDOMAIN
   })
   .then(url => {
     console.log(`ngrok forwarding: ${url} -> http://localhiost:${port}`);
@@ -71,5 +71,4 @@ server.listen(port, function() {
     console.log('ngrok error: ', e);
   });
 });
-
 
